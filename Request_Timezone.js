@@ -1,12 +1,31 @@
 fetch("https://time.hidemyacc.com/")
-  .then((res) => res.json())
-  .then((data) => console.log(data));
-//JSON sẽ dễ hiểu hơn XML
+  .then((res) => res.json()) 
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err))
 
-//Tìm hiểu thêm các phương thức get, push, post, delete 
+//then(onSuccess, onError): nhận 2 hàm onSuccess (hàm gọi khi promise hoàn thành), onError (hàm gọi khi promise có lỗi)
+//catch(): 
+// async/await là cơ chế giúp thực hiện các thao tác bất đồng bộ
+
+// axios.get("https://time.hidemyacc.com/")
+//   .then(response => console.log("response", response.data))
+
+// async function() {
+//   try {
+//     const user = await api.getUser('sun_user');
+//     const posts = await api.getPostsOfUser(user);
+//     const comments = await api.getCommentsOfPosts(posts);
+
+//     console.log(comments;
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+//Tìm hiểu thêm các phương thức get, put, post, delete 
 //get: lấy về
 //post: Tạo mới
-//push: cập nhật
+//put: cập nhật
 //delete: xóa
 // function myFetch(url, type, data) {
 
